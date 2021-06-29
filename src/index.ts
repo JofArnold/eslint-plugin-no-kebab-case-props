@@ -1,4 +1,4 @@
-const noKebabCaseProps = require('./src/rules/noKebabCaseProps');
+import noKebabCaseProps from './rules/noKebabCaseProps';
 
 module.exports = {
   rules: {

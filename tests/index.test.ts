@@ -1,5 +1,5 @@
 const RuleTester = require('eslint').RuleTester;
-const rule = require('../src/rules/noKebabCaseProps');
+const rule = require('../src/rules/noKebabCaseProps').default;
 
 const parserOptions = {
   ecmaVersion: 2018,

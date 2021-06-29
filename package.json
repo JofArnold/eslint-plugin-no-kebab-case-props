@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "author": "Jof Arnold",
   "description": "Linting rule to pr",
-  "main": "index.js",
+  "private": false,
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint ./",
     "postlint": "npm run type-check",
     "pretest": "npm run lint",
-    "test": "npm run unit-test",
-    "type-check": "tsc"
+    "test": "npm run test",
+    "type-check": "tsc",
+    "build": "npm tsc"
   },
   "files": [
     "LICENSE",
-    "README.md",
-    "index.js",
-    "src"
+    "README.md"
   ],
   "repository": {
     "type": "git",

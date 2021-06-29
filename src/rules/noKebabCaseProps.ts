@@ -1,9 +1,9 @@
 import * as ESLint from 'eslint';
-import * as ESTreeTypes from '@types/estree';
+import * as ESTrees from 'estree';
 import * as BabelTypes from '@babel/types';
 import camelCase from 'lodash/camelCase';
 
-module.exports = {
+const rules = {
   meta: {
     type: 'problem',
     docs: {
@@ -19,7 +19,7 @@ module.exports = {
       JSXAttribute(node: BabelTypes.JSXAttribute) {
         if (node.type === 'JSXAttribute') {
           // @TODO: don't use casting here. Instead use declaration merging
-          const identifier = node.name as unknown as ESTreeTypes.Identifier;
+          const identifier = node.name as unknown as ESTrees.Identifier;
           if (
             typeof identifier?.name === 'string' &&
             identifier.name.includes('-')
@@ -41,3 +41,5 @@ module.exports = {
     };
   },
 };
+
+export default rules;
